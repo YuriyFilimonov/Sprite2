@@ -9,7 +9,7 @@ public class GameCanvas extends JPanel {
 
     GameCanvas(MainCircles listener) {
         this.listener = listener;
-        this.setBackground(colorManagement.getColor());
+        this.setBackground(colorManagement.render());
         lastFrameTime = System.nanoTime();
     }
 

@@ -1,7 +1,7 @@
 import java.awt.*;
 
 public class ColorManagement {
-    private boolean variableColor;
+    private boolean isVariableColor;
 
     private int baseR = (int) (Math.random() * 256);
     private int baseG = (int) (Math.random() * 256);
@@ -17,16 +17,12 @@ public class ColorManagement {
 
     private Color color = new Color(baseR, baseG, baseB);
 
-    ColorManagement(boolean variableColor) {
-        this.variableColor = variableColor;
-    }
-
-    public Color getColor() {
-        return color;
+    ColorManagement(boolean isVariableColor) {
+        this.isVariableColor = isVariableColor;
     }
 
     void update(GameCanvas canvas, float deltaTime) {
-        if (variableColor) {
+        if (isVariableColor) {
             summVR += vR;
             summVG += vG;
             summVB += vB;
